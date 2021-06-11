@@ -1,9 +1,12 @@
+package Game;
+
+import Game.Event.FireEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class Main extends JavaPlugin {
+public class Valorance extends JavaPlugin {
 
-    private static Main pl;
-    public static Main getPlugin() {return pl;}
+    private static Valorance pl;
+    public static Valorance getPlugin() {return pl;}
 
     public void onEnable() {
         getServer().getPluginManager().registerEvents(new FireEvent(), this);
