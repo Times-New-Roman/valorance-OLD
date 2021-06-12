@@ -19,7 +19,7 @@ import java.util.Arrays;
 public class Shop implements Listener {
     private final Inventory inv;
     public Shop() {
-            inv = Bukkit.createInventory(null, 54, "Example");
+            inv = Bukkit.createInventory(null, 54, "Shop");
 
             // Put the items into the inventory
             initializeItems();
