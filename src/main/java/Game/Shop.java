@@ -67,6 +67,10 @@ public class Shop implements Listener {
 
 
             p.sendMessage("You clicked at slot " + e.getRawSlot());
+
+            //Adds the clicked weapon to the InventoryManager map
+
+            if ( )
         }
 
 
