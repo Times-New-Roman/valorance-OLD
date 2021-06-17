@@ -1,8 +1,12 @@
 package Game;
 
+import com.google.common.hash.Funnel;
+import com.google.common.hash.PrimitiveSink;
+import net.minecraft.server.v1_16_R3.Tag;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.HumanEntity;
+import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -13,47 +17,67 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.Arrays;
-
+import java.util.HashMap;
 
 
 public class Shop implements Listener {
-    private final Inventory inv;
-    public Shop() {
-            inv = Bukkit.createInventory(null, 54, "Shop");
 
-            // Put the items into the inventory
-            initializeItems();
-        }
+    private final Inventory inv;
+
+    public Shop() {
+        inv = Bukkit.createInventory(null, 54, "Shop");
+        initializeItems();
+    }
 
         public void initializeItems() {
-            inv.addItem(createGuiItem(Material.IRON_HOE, "§b§lSpirit", "§f§l$2,900","§7A 30-round rifle that can instantly kill", "§7enemies with a headshot."));
-            inv.addItem(createGuiItem(Material.IRON_SHOVEL, "§b§lDeviant", "§f§l$2,900", "§7A suppressed fully-automatic rifle with", "§7a promising fire rate."));
+            ItemStack sidebar = new ItemStack(Material.CYAN_STAINED_GLASS_PANE);
+            //The sidebar represents the sidebars on either side made up of cyan panes.
+            inv.setItem(0, sidebar);
+            inv.setItem(9, sidebar);
+            inv.setItem(18, sidebar);
+            inv.setItem(27, sidebar);
+            inv.setItem(36, sidebar);
+            inv.setItem(45, sidebar);
+            inv.setItem(8, sidebar);
+            inv.setItem(17, sidebar);
+            inv.setItem(26, sidebar);
+            inv.setItem(35, sidebar);
+            inv.setItem(44, sidebar);
+            inv.setItem(53, sidebar);
 
+            //The following are placeholders for the implementation of proper weapon types:
+            ItemStack pistolPlaceholder = new ItemStack(Material.STONE_HOE);
+            ItemStack weaponPlaceholder = new ItemStack(Material.IRON_HOE);
+            ItemStack abilityPlaceholder = new ItemStack(Material.ENCHANTED_BOOK);
+            ItemStack armorPlaceholder = new ItemStack(Material.IRON_CHESTPLATE);
+            ItemStack economyPlaceholder = new ItemStack(Material.NAME_TAG);
+
+            inv.setItem(1, pistolPlaceholder);
+            inv.setItem(10, pistolPlaceholder);
+            inv.setItem(19, pistolPlaceholder);
+            inv.setItem(28, pistolPlaceholder);
+            inv.setItem(3, weaponPlaceholder);
+            inv.setItem(4, weaponPlaceholder);
+            inv.setItem(5, weaponPlaceholder);
+            inv.setItem(12, weaponPlaceholder);
+            inv.setItem(13, weaponPlaceholder);
+            inv.setItem(14, weaponPlaceholder);
+            inv.setItem(21, weaponPlaceholder);
+            inv.setItem(22, weaponPlaceholder);
+            inv.setItem(23, weaponPlaceholder);
+            inv.setItem(30, weaponPlaceholder);
+            inv.setItem(31, weaponPlaceholder);
+            inv.setItem(32, weaponPlaceholder);
+            inv.setItem(46, abilityPlaceholder);
+            inv.setItem(47, abilityPlaceholder);
+            inv.setItem(48, abilityPlaceholder);
+            inv.setItem(50, economyPlaceholder);
+            inv.setItem(51, economyPlaceholder);
+            inv.setItem(52, economyPlaceholder);
         }
-
-
-        protected ItemStack createGuiItem(final Material material, final String name, final String... lore) {
-            final ItemStack item = new ItemStack(material, 1);
-            final ItemMeta meta = item.getItemMeta();
-
-            // Set the name of the item
-            meta.setDisplayName(name);
-
-            // Set the lore of the item
-            meta.setLore(Arrays.asList(lore));
-
-            item.setItemMeta(meta);
-
-            return item;
-        }
-
-        public void openInventory(final HumanEntity ent) {
-            ent.openInventory(inv);
-        }
-
 
         @EventHandler
-        public void onInventoryClick(final InventoryClickEvent e) {
+        public void onInventoryClick ( final InventoryClickEvent e){
             if (e.getInventory() != inv) return;
 
             e.setCancelled(true);
@@ -70,14 +94,14 @@ public class Shop implements Listener {
 
             //Adds the clicked weapon to the InventoryManager map
 
-            if ( )
         }
 
 
         @EventHandler
-        public void onInventoryClick(final InventoryDragEvent e) {
+        public void onInventoryClick ( final InventoryDragEvent e){
             if (e.getInventory() == inv) {
                 e.setCancelled(true);
             }
         }
-}
+    }
+
