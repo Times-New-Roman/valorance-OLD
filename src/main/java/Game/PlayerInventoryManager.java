@@ -21,7 +21,7 @@ public class PlayerInventoryManager {
     public void setPrimary(String player, Gun gun) { primaryWeapon.put(player, gun); }
     public void setSecondary(String player, Gun gun) { secondaryWeapon.put(player, gun); }
 
-    public Gun itemToGun(Material material) {
+    public static Gun itemToGun(Material material) {
         switch (material) {
             case IRON_SHOVEL: {
                 return new TestWeapon();

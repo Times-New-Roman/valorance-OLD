@@ -1,11 +1,14 @@
 package Game.Command;
 
-import Game.RoundManager;
+import Game.Match.Round.RoundManager;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.command.TabCompleter;
 
-public class RoundCommand implements CommandExecutor {
+import java.util.List;
+
+public class RoundCommand implements CommandExecutor, TabCompleter {
 
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String label, String[] args) {
@@ -16,8 +19,12 @@ public class RoundCommand implements CommandExecutor {
             return true;
         }
         else {
-            commandSender.sendMessage("Error: You tried to use functionality which hasn't been implemented yet.");
             return false;
         }
+    }
+
+    @Override
+    public List<String> onTabComplete(CommandSender commandSender, Command command, String s, String[] strings) {
+        return null;
     }
 }
