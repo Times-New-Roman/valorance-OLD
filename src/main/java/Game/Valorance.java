@@ -1,7 +1,12 @@
 package Game;
 
+import Game.Agent.Agent;
+import Game.Command.AgentCommand;
+import Game.Command.RoundCommand;
 import Game.Event.FireEvent;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.awt.*;
 
 public class Valorance extends JavaPlugin {
 
@@ -9,7 +14,13 @@ public class Valorance extends JavaPlugin {
     public static Valorance getPlugin() {return pl;}
 
     public void onEnable() {
+
         getServer().getPluginManager().registerEvents(new FireEvent(), this);
         pl = this;
+        pl.getCommand("round").setExecutor(new RoundCommand());
+        pl.getCommand("agent").setExecutor(new AgentCommand());
+
+        pl.getCommand("round").setTabCompleter(new RoundCommand());
+        pl.getCommand("agent").setTabCompleter(new AgentCommand());
     }
 }
