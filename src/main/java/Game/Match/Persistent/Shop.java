@@ -1,5 +1,8 @@
-package Game;
+package Game.Match.Persistent;
 
+import Game.Agent.AgentUtilityType;
+import Game.Agent.OldDog.OldDog;
+import Game.Agent.OldDog.Utility.Incendiary;
 import com.google.common.hash.Funnel;
 import com.google.common.hash.PrimitiveSink;
 import net.minecraft.server.v1_16_R3.Tag;

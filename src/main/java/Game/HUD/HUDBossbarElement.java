@@ -1,4 +1,4 @@
-package Game;
+package Game.HUD;
 
 public class HUDBossbarElement {
 }
