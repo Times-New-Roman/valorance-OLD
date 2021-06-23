@@ -1,0 +1,11 @@
+main: Game.Valorance
+author: Times_New_Roman_
+version: 0.0.1
+name: Valorance_Alpha_Closed
+api-version: 1.16
+commands:
+  round:
+    usage: "Incorrect usage of command! Use: /round <start|end|restart|info|options>."
+    aliases:
+      - "valorance:round"
+    description: "Begin, end, and manage rounds. This will become deprecated once full game support is added."
