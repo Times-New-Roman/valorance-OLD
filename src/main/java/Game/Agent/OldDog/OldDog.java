@@ -26,7 +26,7 @@ public class OldDog extends Agent {
     }
     private final String name = "Old Dog";
 
-    private ArrayList<String> lore = new ArrayList<>(asList(
+    private final ArrayList<String> lore = new ArrayList<>(asList(
             "The battle-hardened general from America,",
             "\"Old Dog\" Sanders is ready to bring his",
             "team the battlefield advantage using an",
@@ -112,8 +112,6 @@ public class OldDog extends Agent {
 
     @Override
     public void useUtility(AgentUtilityType type, Player player, Agent agent) {
-
         agent.getAgentUtility(type).use();
-
     }
 }
