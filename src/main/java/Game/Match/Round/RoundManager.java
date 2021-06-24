@@ -1,14 +1,10 @@
 package Game.Match.Round;
 
-import Game.PlayerInventoryManager;
 import Game.Team.Attackers;
 import Game.Team.Defenders;
 import Game.Weapon.Gun;
-import Game.Weapon.TestWeapon;
-import org.bukkit.Bukkit;
+import static org.bukkit.Bukkit.getOnlinePlayers;
 import org.bukkit.entity.Player;
-
-import java.util.Collection;
 
 public class RoundManager {
     public RoundManager(int roundNumber, Attackers attackers, Defenders defenders) {
@@ -20,7 +16,7 @@ public class RoundManager {
     public static void startRound() {
 
         PlayerInventoryManager inventoryManager = new PlayerInventoryManager();
-            for (Player player : Bukkit.getOnlinePlayers()) {
+            for (Player player : getOnlinePlayers()) {
                 String playerName = player.getName();
 
 
