@@ -1,15 +1,7 @@
 package Game.Match.Persistent;
 
-import Game.Agent.AgentUtilityType;
-import Game.Agent.OldDog.OldDog;
-import Game.Agent.OldDog.Utility.Incendiary;
-import com.google.common.hash.Funnel;
-import com.google.common.hash.PrimitiveSink;
-import net.minecraft.server.v1_16_R3.Tag;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
-import org.bukkit.entity.HumanEntity;
-import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -17,10 +9,6 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryDragEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.ItemMeta;
-
-import java.util.Arrays;
-import java.util.HashMap;
 
 
 public class Shop implements Listener {

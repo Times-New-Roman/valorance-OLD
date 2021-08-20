@@ -14,7 +14,6 @@ public class RoundCommand implements CommandExecutor, TabCompleter {
     public boolean onCommand(CommandSender commandSender, Command command, String label, String[] args) {
 
         if (args[0].equalsIgnoreCase("start")) {
-            RoundManager.startRound();
             commandSender.sendMessage("Round started.");
             return true;
         }

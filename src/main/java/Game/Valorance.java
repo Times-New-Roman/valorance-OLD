@@ -1,12 +1,9 @@
 package Game;
 
-import Game.Agent.Agent;
 import Game.Command.AgentCommand;
 import Game.Command.RoundCommand;
 import Game.Event.FireEvent;
 import org.bukkit.plugin.java.JavaPlugin;
-
-import java.awt.*;
 
 public class Valorance extends JavaPlugin {
 

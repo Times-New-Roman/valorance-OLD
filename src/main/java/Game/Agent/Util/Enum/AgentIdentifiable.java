@@ -1,4 +1,4 @@
-package Game.Agent;
+package Game.Agent.Util.Enum;
 
 public enum AgentIdentifiable {
     OLDDOG,

@@ -1,5 +1,6 @@
 package Game.Command;
 
+import Game.Effect.Effects;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -13,16 +14,11 @@ public class AgentCommand implements CommandExecutor, TabCompleter {
     public boolean onCommand(CommandSender commandSender, Command command, String label, String[] args) {
         if (args[0].equalsIgnoreCase("select")) {
 
-            switch ( args[1].toLowerCase() ) {
-                case "olddog"
-
+            switch (args[1].toLowerCase()) {
+                case ":
+                e.
+                    return true;
             }
-
-            commandSender.sendMessage("Round started.");
-            return true;
-        }
-        else {
-            return false;
         }
     }
 

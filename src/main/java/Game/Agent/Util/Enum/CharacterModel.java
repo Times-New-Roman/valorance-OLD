@@ -1,7 +1,6 @@
-package Game.Agent;
+package Game.Agent.Util.Enum;
 
 public enum CharacterModel {
-
     OLDDOG,
     HARBINGER,
     KOBRA,
